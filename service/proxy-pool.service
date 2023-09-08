@@ -1,0 +1,11 @@
+[Unit]
+Description=Proxy Pool Service
+After=network.target
+
+[Service]
+ExecStart=/usr/local/python3/bin/python3 /var/www/porxy-pool/main.py
+WorkingDirectory=/var/www/porxy-pool
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
